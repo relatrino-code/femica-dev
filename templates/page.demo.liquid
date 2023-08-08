@@ -1,4 +1,81 @@
-<div>
-  <h1>I am Back</h1>
-  <h2>But this time, with a bang!!!</h2>
+<div class="demo-div">
+
+{% assign myVar = 6 %}
+{{ myVar }}
+{% assign myVar1 = "This is Demo Text" %}
+{{ myVar1 }}
+<br>
+
+{% comment %} This is a comment {% endcomment %}
+
+{% assign num1 = 50 %}
+{% assign num2 = 70 %}
+{% assign num3 = 130 %}
+{{ num1 | plus: num2 }}
+{{ num2 | minus: num1 }}
+{{ num1 | times: num2 }}
+{{ num2 | divided_by: num1 }}
+
+<br>
+
+{% if num2 > num1 %}
+  {% if num2 > num3 %}
+    Greatest Number is: {{ num2 }}
+  {% else %}
+    Greatest Number is: {{ num3 }}
+  {% endif %}
+{% elsif num1 > num2 %}
+  {% if num1 > num3 %}
+    Greatest Number is: {{num1}}
+  {% else %}
+    Greatest Number is: {{ num3 }}
+  {% endif %} 
+{% endif %}
+
+<br>
+{% assign color = "green" %}
+{% case color %}
+  {% when "red" %}
+    Color is: {{ color }}
+  {% when "blue" %}
+    Color is: {{ color }}
+  {% when "green" %}
+    Color is: {{ color }}
+  {% else %}
+    None of the above
+  {% endcase %}
+
+  <br>
+
+{% if num1 > num2 and num1 > num3 %}
+  Number 1 is greatest
+{% elsif num2 > num1 and num2 > num3 %}
+  Number 2 is greatest
+{% else %}
+Number 3 is greatest
+{% endif %}  
+<br>
+
+{% for i in (1..10) %}
+  {% if forloop.first %}
+    The forloop index is first <br>
+  {% elsif forloop.last %}
+    The forloop index is last <br>
+  {% else %}
+    The index is : {{ i }} <br>
+  {% endif %}
+{% endfor %}
+
+<br>
+
+{% comment %} Inside else, instead of i we can also use forloop.index -> starts from 1 {% endcomment %}
+{% comment %} To make forloop.index start from 0, use forloop.index0 {% endcomment %}
+
+{% for product in collections.influencer-look.products %}
+  {{ product.title }} <br>
+{% endfor %}
+
+<br>
+
+
 </div>

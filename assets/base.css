@@ -2957,3 +2957,10 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
+
+.demo-div {
+  width: 50%;
+  margin: 0 auto;
+  background-color: pink;
+  text-align: center;
+}
