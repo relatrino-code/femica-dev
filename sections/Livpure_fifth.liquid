@@ -1,0 +1,107 @@
+<style>
+  .img_textfifth{
+    display: flex;
+  }
+   .textfifth{
+      padding: 30px;
+      width: 100%;
+      background-color: #F8F8FF;
+      color: #E6E6F;
+      font-weight: 500;
+   }
+  .pafifth{
+    padding-bottom: 15px;
+      font-size: large;
+  }
+  .Paragraphfifth{
+    font-size: large;
+  }
+   @media screen and (max-width: 667px) {
+      .img_textfifth{
+         display: flex;
+        flex-direction: column-reverse;
+      }
+     .imgresponsive{
+       width: 375px;
+     }
+
+  }
+</style>
+
+<div class="img_textfifth" style="padding-top: 10px">
+  <div class="textfifth">
+    <h1>{{ section.settings.textheadingfifth }}</h1>
+    <div class="pafifth">
+      <span>{{ section.settings.text_boxfifth }}</span>
+    </div>
+    <div class="Paragraphfifth">
+      <span>
+        {{ section.settings.Secondtext_boxfifth }}
+      </span>
+    </div>
+  </div>
+  <div
+    class="imgfifth"
+    style="
+      width: 100%;  height: 100%; border-top-right-radius: 31px;
+      border-bottom-right-radius: 31px;
+    "
+  >
+    <img class="imgresponsive" src="{{ section.settings.myimagefifth | img_url: 'master'}}">
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Livpure fourth Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "textheadingfifth",
+      "label": "head text box"
+    },
+    {
+      "type": "textarea",
+      "id": "text_boxfifth",
+      "label": "My text box"
+    },
+    {
+      "type": "textarea",
+      "id": "Secondtext_boxfifth",
+      "label": "My text box"
+    },
+    {
+      "type": "select",
+      "id": "text_positionfifth",
+      "label": "select text position",
+      "options":[
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "image_picker",
+      "id": "myimagefifth",
+      "label": "Select image"
+      }
+
+  ],
+  "presets":[
+    {
+      "name": "Livpure fifth Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

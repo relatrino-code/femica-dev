@@ -1,0 +1,389 @@
+.
+<style>
+  .three_card_flex{
+      position: relative;
+      margin: 5px;
+      width: 33%;
+      background: white;
+      box-shadow: 0px 20px 40px 0px rgb(0 28 64 / 10%);
+      transition: box-shadow 0.3s ease-out 0s;
+      border-radius: 0px 0.25rem 0.25rem;
+      padding: 10px;
+  }
+  .second_card_heading_img{
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 2px 2px 5px #e0e0e0, ;
+  }
+  .Livpure_second_main_headingh{
+    ont-weight: 600;
+      font-size: 36px;
+      line-height: 42px;
+      color: #453481;
+      text-align: center;
+  }
+  .first_card_heading{
+      font-weight: 400!important;
+      font-size: 14px;
+      text-align: center;
+      line-height: 24px;
+      color: black;
+      padding: 5px 10px;
+      font-family: Neo sans pro !important;
+    background: linear-gradient(316deg,rgb(244 217 204) 0%,rgb(221 209 255) 100%);
+  }
+  .first_card_url{
+  font-family: Neo sans pro;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: normal;
+      color: #432c89;
+      text-decoration: none;
+  }
+
+
+    .buymyfirstbtn{
+      background-color: #453481;
+      border-radius: 8px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      min-width: 100%;
+      font-size: large;
+  }
+  .second_card_heading{
+      border-bottom: 1px solid #dbd9d9;
+      padding: 10px;
+  }
+  .second_second_card_heading{
+      border-bottom: 1px solid #dbd9d9;
+  }
+   .firstflex{
+        display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+    	 .listone{
+    background: linear-gradient(270deg, rgb(237 234 234) 0%, rgb(226 224 224) 100%);
+      width: fit-content;
+      border-radius: 5px;
+      text-align: center;
+
+    }
+    .listtwo{
+      background: linear-gradient(270deg, rgb(237 234 234) 0%, rgb(226 224 224) 100%);
+      width: fit-content;
+      border-radius: 5px;
+      position: relative;
+      right: -19px;
+
+    }
+    .secondflex{
+      padding-top: 15px;
+    }
+    .listthree{
+      background: linear-gradient(270deg, rgb(237 234 234) 0%, rgb(226 224 224) 100%);
+      width: fit-content;
+      border-radius: 5px;
+      text-align: center;
+
+  }
+  .listfour{
+      background: linear-gradient(270deg, rgb(237 234 234) 0%, rgb(226 224 224) 100%);
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+    position: relative;
+    right: -19px;
+  }
+  .subtextone{
+      color: #453481;
+      font-weight: bold;
+      border-bottom: 1px solid #dbd9d9;
+  }
+    .card_textone{
+       color: #453481;
+      font-weight: bold;
+      border-bottom: 1px solid #dbd9d9;
+    }
+  .card_textthird{
+       color: #453481;
+      font-weight: bold;
+      border-bottom: 1px solid #dbd9d9;
+    }
+  .three_card_flex{
+      padding-right: 10px;
+      padding-left: 10px;
+      margin-right: 10px;
+      margin-left: auto;
+  }
+</style>
+<h1 class="Livpure_second_main_headingh">{{ section.settings.second_Main_heading }}</h1>
+<div class="three_card_flex" style="display: flex; width: 100%;">
+  <div class="first_card" style="margin: 5px; padding: 10px;">
+    <div class="card_first">
+      <h2 class="first_card_heading">{{ section.settings.first_card_heading }}</h2>
+      <img class="First_Livpure_img" src="{{ section.settings.first_card_heading_img | img_url: 'master'}}" </img>
+      <a class="first_card_url" href="{{ section.settings.first_card_url }}"> {{ section.settings.first_card_name }}</a>
+      <div class="product_first_card_price">
+        <span class="pricehead">{{ section.settings.first_price }}</span><br>
+        <div>
+          <img
+            class="second_card_heading_img"
+            src="{{ section.settings.second_card_heading_img | img_url: 'master'}}"
+            </img
+          >
+          <p class="second_card_heading">{{ section.settings.second_card_heading }}</p>
+          <p class="second_second_card_heading">{{ section.settings.second_second_card_heading }}</p>
+          <p class="second_third_card_heading" style=" border-bottom: 1px solid #dbd9d9;">
+            {{ section.settings.second_third_card_heading }}
+          </p>
+          <div class="firstflex">
+            <span class="listone">{{ section.settings.first_list }}</span>
+            <span class="listtwo">{{ section.settings.second_list }}</span>
+          </div>
+          <div class="secondflex">
+            <span class="listthree">{{ section.settings.third_list }}</span>
+            <span class="listfour">{{ section.settings.fourth_list }}</span>
+          </div>
+          <p class="subtextone">{{ section.settings.subtextone }}</p>
+          <p class="card_text">{{ section.settings.card_text }}</p>
+          <p class="card_textone">{{ section.settings.card_textone }}</p>
+          <p class="card_textsecond">{{ section.settings.card_textsecond }}</p>
+          <p class="card_textthird">{{ section.settings.card_textthird }}</p>
+          <p class="card_textfourth">{{ section.settings.card_textfourth }}</p>
+
+          <div class="First_buy_btn" style="padding-top: 94px;">
+            <a href="{{ section.settings.Buy_link_1}}"
+              ><button type="button" class="buymyfirstbtn">{{ section.settings.button_Buy_Now }}</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="first_card" style="margin: 5px; padding: 10px;">
+    <div class="card_first">
+      <h2 class="first_card_heading">{{ section.settings.first_card_heading }}</h2>
+      <img class="First_Livpure_img" src="{{ section.settings.first_card_heading_img | img_url: 'master'}}" </img>
+      <a class="first_card_url" href="{{ section.settings.first_card_url }}"> {{ section.settings.first_card_name }}</a>
+      <div class="product_first_card_price">
+        <span class="pricehead">{{ section.settings.first_price }}</span><br>
+        <div>
+          <img
+            class="second_card_heading_img"
+            src="{{ section.settings.second_card_heading_img | img_url: 'master'}}"
+            </img
+          >
+          <p class="second_card_heading">{{ section.settings.second_card_heading }}</p>
+          <p class="second_second_card_heading">{{ section.settings.second_second_card_heading }}</p>
+          <p class="second_third_card_heading" style=" border-bottom: 1px solid #dbd9d9;">
+            {{ section.settings.second_third_card_heading }}
+          </p>
+          <div class="firstflex">
+            <span class="listone">{{ section.settings.first_list }}</span>
+            <span class="listtwo">{{ section.settings.second_list }}</span>
+          </div>
+          <div class="secondflex">
+            <span class="listthree">{{ section.settings.third_list }}</span>
+            <span class="listfour">{{ section.settings.fourth_list }}</span>
+          </div>
+          <p class="subtextone">{{ section.settings.subtextone }}</p>
+          <p class="card_text">{{ section.settings.card_text }}</p>
+          <p class="card_textone">{{ section.settings.card_textone }}</p>
+          <p class="card_textsecond">{{ section.settings.card_textsecond }}</p>
+          <p class="card_textthird">{{ section.settings.card_textthird }}</p>
+          <p class="card_textfourth">{{ section.settings.card_textfourth }}</p>
+
+          <div class="First_buy_btn" style="padding-top: 94px;">
+            <a href="{{ section.settings.Buy_link_1}}"
+              ><button type="button" class="buymyfirstbtn">{{ section.settings.button_Buy_Now }}</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="first_card" style="margin: 5px; padding: 10px;">
+    <div class="card_first">
+      <h2 class="first_card_heading">{{ section.settings.first_card_heading }}</h2>
+      <img class="First_Livpure_img" src="{{ section.settings.first_card_heading_img | img_url: 'master'}}" </img>
+      <a class="first_card_url" href="{{ section.settings.first_card_url }}"> {{ section.settings.first_card_name }}</a>
+      <div class="product_first_card_price">
+        <span class="pricehead">{{ section.settings.first_price }}</span><br>
+        <div>
+          <img
+            class="second_card_heading_img"
+            src="{{ section.settings.second_card_heading_img | img_url: 'master'}}"
+            </img
+          >
+          <p class="second_card_heading">{{ section.settings.second_card_heading }}</p>
+          <p class="second_second_card_heading">{{ section.settings.second_second_card_heading }}</p>
+          <p class="second_third_card_heading" style=" border-bottom: 1px solid #dbd9d9;">
+            {{ section.settings.second_third_card_heading }}
+          </p>
+          <div class="firstflex">
+            <span class="listone">{{ section.settings.first_list }}</span>
+            <span class="listtwo">{{ section.settings.second_list }}</span>
+          </div>
+          <div class="secondflex">
+            <span class="listthree">{{ section.settings.third_list }}</span>
+            <span class="listfour">{{ section.settings.fourth_list }}</span>
+          </div>
+          <p class="subtextone">{{ section.settings.subtextone }}</p>
+          <p class="card_text">{{ section.settings.card_text }}</p>
+          <p class="card_textone">{{ section.settings.card_textone }}</p>
+          <p class="card_textsecond">{{ section.settings.card_textsecond }}</p>
+          <p class="card_textthird">{{ section.settings.card_textthird }}</p>
+          <p class="card_textfourth">{{ section.settings.card_textfourth }}</p>
+
+          <div class="First_buy_btn" style="padding-top: 94px;">
+            <a href="{{ section.settings.Buy_link_1}}"
+              ><button type="button" class="buymyfirstbtn">{{ section.settings.button_Buy_Now }}</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Livpurer second section",
+  "settings": [
+     {
+      "type": "text",
+      "id": "second_Main_heading",
+      "label": "write heading"
+    },
+    {
+      "type": "text",
+      "id": "first_card_heading",
+      "label": "first card write heading"
+    },
+     {
+      "type": "image_picker",
+       "id": "first_card_heading_img",
+      "label": "Select Image"
+        },
+    {
+       "type": "url",
+      "id": "first_card_url",
+      "label": "link page"
+    },
+    {
+      "type": "text",
+      "id": "first_card_name",
+      "label": "first card name"
+    },
+    {
+      "type": "text",
+      "id": "first_price",
+      "label": "first price heading"
+    },
+      {
+      "type": "image_picker",
+       "id": "second_card_heading_img",
+      "label": "Select Image"
+      },
+    {
+      "type": "text",
+      "id": "second_card_heading",
+      "label": "second card first heading"
+     },
+    {
+      "type": "text",
+      "id": "second_second_card_heading",
+      "label": "second card second heading"
+    },
+    {
+      "type": "text",
+      "id": "second_third_card_heading",
+      "label": "second card third heading"
+    },
+
+
+    {
+      "type": "text",
+      "id": "first_list",
+      "label": "write list"
+    },
+
+    {
+      "type": "text",
+      "id": "second_list",
+      "label": "write list"
+    },
+
+    {
+      "type": "text",
+      "id": "third_list",
+      "label": "write list"
+    },
+
+    {
+      "type": "text",
+      "id": "fourth_list",
+      "label": "write list"
+    },
+    {
+      "type": "text",
+      "id": "subtextone",
+      "label": "write list"
+    },
+
+    {
+      "type": "text",
+      "id": "card_text",
+      "label": "write text"
+    },
+     {
+      "type": "text",
+      "id": "card_textone",
+      "label": "write text"
+        },
+     {
+      "type": "text",
+      "id": "card_textsecond",
+      "label": "write text"
+     },
+    {
+      "type": "text",
+      "id": "card_textthird",
+      "label": "write text"
+     },
+
+     {
+      "type": "text",
+      "id": "card_textfourth",
+      "label": "write text"
+     },
+
+       {
+        "type": "text",
+        "id": "button_Buy_Now",
+        "default": "Button label",
+        "label": "button name"
+      },
+      {
+        "type": "url",
+        "id": "Buy_link_1",
+        "label": "Button url link"
+      }
+
+  ],
+  "presets":[
+    {
+      "name": "Livpure_section_second"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

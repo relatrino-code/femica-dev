@@ -1,0 +1,119 @@
+<style>
+  .icon_block{
+     display: flex;
+     justify-content: space-between;
+     text-align: center;
+    padding-right: 102px;
+      padding-left: 110px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+     background-color: #d1cdec;
+  }
+   .icon{
+      display: flex;
+      flex-direction: column;
+   }
+  @media screen and (max-width: 667px) {
+           .icon_block{
+             width: auto;
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 20px;
+           }
+  }
+</style>
+<div class="icon_block">
+  <div class="icon">
+    <img class="Shipingone" src="{{ section.settings.Shipingone | img_url: 'master'}}">
+    <span class="icon_text">{{ section.settings.iconeone }}</span>
+  </div>
+  <div class="icon">
+    <img class="Shipingtwo" src="{{ section.settings.Shipingtwo | img_url: 'master'}}">
+    <span class="icon_text">{{ section.settings.iconetwo }}</span>
+  </div>
+  <div class="icon">
+    <img class="Shipingthree" src="{{ section.settings.Shipingthree | img_url: 'master'}}">
+    <span class="icon_text">{{ section.settings.iconethree }}</span>
+  </div>
+  <div class="icon">
+    <img class="Shipingfour" src="{{ section.settings.Shipingfour | img_url: 'master'}}">
+    <span class="icon_text">{{ section.settings.iconefour }}</span>
+  </div>
+  <div class="icon">
+    <img class="Shipingfive" src="{{ section.settings.Shipingfive | img_url: 'master'}}">
+    <span class="icon_text">{{ section.settings.iconefive }}</span>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "third Livpure",
+  "settings": [
+     {
+      "type": "image_picker",
+       "id": "Shipingone",
+      "label": "Select Image"
+       },
+      {
+        "type": "text",
+        "id": "iconeone",
+        "default": "write here",
+        "label": "write icon name"
+      },
+      {
+      "type": "image_picker",
+       "id": "Shipingtwo",
+      "label": "Select Image"
+       },
+     {
+        "type": "text",
+        "id": "iconetwo",
+        "default": "write here",
+        "label": "write icon name"
+      },
+     {
+      "type": "image_picker",
+       "id": "Shipingthree",
+      "label": "Select Image"
+       },
+     {
+        "type": "text",
+        "id": "iconethree",
+        "default": "write here",
+        "label": "write icon name"
+      },
+      {
+      "type": "image_picker",
+       "id": "Shipingfour",
+      "label": "Select Image"
+       },
+      {
+        "type": "text",
+        "id": "iconefour",
+        "default": "write here",
+        "label": "write icon name"
+      },
+      {
+      "type": "image_picker",
+       "id": "Shipingfive",
+      "label": "Select Image"
+       },
+      {
+        "type": "text",
+        "id": "iconefive",
+        "default": "write here",
+        "label": "write icon name"
+      }
+  ],
+  "presets":[
+    {
+      "name": "Livpure_section_third"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

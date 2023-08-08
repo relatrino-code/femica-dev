@@ -1,0 +1,107 @@
+<style>
+.Livpure_main_headingh {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  color: #453481;
+  text-align: center;
+}
+.top_paragraph{
+text-align: center;
+}
+.myfirstbtn{
+    background-color: #453481;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+}
+  .First_btn{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+.First_Livpure_img{
+  width: 100%;
+  border-radius: 15px;
+}
+  .first_img_container{
+     padding: 20px 8px 20px 8px;
+  }
+  .video_frame{
+    width: 100%;
+    height: 550px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+  }
+ @media screen and (max-width: 667px) {
+            .video_frame{
+                 height: 230px;
+            }
+          }
+</style
+
+
+<div>
+  <h1 class="Livpure_main_headingh">{{ section.settings.Main_heading }}</h1>
+ <div class="top_paragraph"<p>{{ section.settings.top_paragraph }}</p></div>
+ <div class="First_btn"> 
+  <a href="{{ section.settings.button_link_1}}"><button type="button" class="myfirstbtn">{{ section.settings.button_read_more }}</button>
+</a>
+</div>
+   <div class="first_img_container">
+  <img class ="First_Livpure_img" src = "{{ section.settings.FirstLivpureimg | img_url: 'master'}}"  width="100%"/>
+</div>
+  <div class="container">
+    <iframe class="video_frame" src="https://www.youtube.com/embed/{{ section.settings.video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+</div> 
+</div>
+{% schema %}
+  {
+    "name": "Livpure_section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "Main_heading",
+        "label": "write heading"
+      },
+      {
+        "type": "textarea",
+        "id": "top_paragraph",
+        "label": "Write paragraph"
+      },
+        {
+          "type": "text",
+          "id": "button_read_more",
+          "default": "Button label",
+          "label": "button name"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "Button url link"
+        },
+          {
+          "type": "image_picker",
+           "id": "FirstLivpureimg",
+          "label": "Select Image"
+          },
+         {
+          "id": "video_url",
+          "type": "text",
+          "label": "Video URL for Desktop"
+        }
+    ],
+    "presets": [
+    {
+      "name": "Livpure_section"
+    }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}

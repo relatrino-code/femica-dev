@@ -1,0 +1,587 @@
+<style>
+ .luckywheelpopup{
+         width: 100%;
+         display: none;
+         border-radius: 10px;
+         top: 20%;
+         position: fixed;
+         z-index: 3;
+        background-color: rgba(0,0,0,.4);
+        height: 100%;
+
+ }
+.Spinlucky{                    
+    display: flex;
+    gap: -14px;
+    width: 50%;
+    background: aquamarine;
+    justify-content: center;
+    height: 780PX;
+}
+
+.mainbox {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  left: -377px;
+}
+
+.mainbox:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(https://cdn.shopify.com/s/files/1/0696/4481/2594/files/icons8-location-50_1.png?v=1681994671) no-repeat;
+  background-size: 9%;
+  left: 7%;
+  top: 48%;
+  transform: rotate(90deg);
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  border: 10px solid #949090;
+  overflow: hidden;
+  transition: all ease-in-out 5s;
+  transform: rotate(90deg);
+}
+
+span {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+}
+
+.span1 {
+  clip-path: polygon(0 17%, 0 50%, 50% 50%);
+  background-color: green;
+}
+
+.span2 {
+  clip-path: polygon(0 17%, 30% 0, 50% 50%);
+  background-color: red;
+}
+
+.span3 {
+  clip-path: polygon(30% 0, 71% 0, 50% 50%);
+  background-color: blue;
+}
+
+.span4 {
+  clip-path: polygon(71% 0, 100% 18%, 50% 50%);
+  background-color: salmon;
+}
+
+.span5 {
+  clip-path: polygon(100% 18%, 100% 50%, 50% 50%);
+  background: #ff8300;
+}
+
+.box2 .span3 {
+  background-color: #00ff04;
+}
+
+.box2 {
+  width: 100%;
+  height: 100%;
+  transform: rotate(180deg);
+}
+
+.font {
+  color: white;
+  font-size: 20px;
+}
+
+.box1 .span1 b {
+  position: absolute;
+  top: 39%;
+  right: 60%;
+  transform: rotate(200deg);
+  text-align: center;
+}
+
+.box1 .span2 b {
+  position: absolute;
+  top: 25%;
+  right: 57%;
+  transform: rotate(-130deg);
+}
+
+.box1 .span3 b {
+  position: absolute;
+  top: 20%;
+  right: 36%;
+  transform: rotate(-90deg);
+}
+
+.box1 .span4 b {
+  position: absolute;
+  top: 25%;
+  right: 15%;
+  transform: rotate(-45deg);
+}
+
+.box1 .span5 b {
+  position: absolute;
+  top: 38%;
+  right: 10%;
+  transform: rotate(-15deg);
+  text-align: center;
+}
+
+.box2 .span1 b {
+  position: absolute;
+  top: 34%;
+  right: 70%;
+  transform: rotate(200deg);
+}
+
+.box2 .span2 b {
+  position: absolute;
+  top: 20%;
+  right: 60%;
+  transform: rotate(-130deg);
+  text-align: center;
+}
+
+.box2 .span3 b {
+  position: absolute;
+  top: 15%;
+  right: 40%;
+  transform: rotate(270deg);
+}
+
+.box2 .span4 b {
+  position: absolute;
+  top: 27%;
+  right: 20%;
+  transform: rotate(310deg);
+}
+
+.box2 .span5 b {
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  transform: rotate(-20deg);
+  text-align: center;
+}
+
+.spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 4px solid white;
+  background-color: #ff5722;
+  color: #fff;
+  box-shadow: 0 5px 20px #000;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.spin:active {
+  width: 70px;
+  height: 70px;
+  font-size: 20px;
+}
+
+.mainbox.animate:after {
+  animation: animateArrow 0.7s ease infinite;
+}
+
+audio {
+  display: none;
+}
+
+@keyframes animateArrow {
+  50% {
+    right: -50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainbox {
+    width: 100%;
+    height: 50%;
+  }
+}
+  
+  div#tryluck.tryluck{
+    width: 720px;
+    position: relative;
+    left: 71px;
+}
+       
+
+.luckyinfo {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: normal;
+    position: relative;
+    left: 264px;
+}
+ h1.spinhed1{
+     color: black;
+     font-size: 27px;
+     font-weight: bold;
+ }
+.luckyinfo{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: normal;
+}
+  .checkbox{
+   color: black;
+   font-size: 12px;
+   font-weight: bold;
+}
+ input#check{
+       margin: 0;
+       position: relative;
+       top: 2px;
+ }
+
+ .usemail{
+   margin-bottom: 12px;
+   width: 100%;
+ }
+ #email.form-control{
+       width: 401px;
+       padding: 8px;
+       border: none;
+ }
+  .usename{
+   margin-bottom: 12px;
+   width: 100%;
+ }
+ #name.form-control{
+       width: 401px;
+       padding: 8px;
+       border: none;
+ }
+ .spinbtn{
+    margin-top: 4px;
+ }
+ #s{
+       width: 401px;
+       padding: 8px;
+       color: white;
+       background: black;
+       font-size: 12px;
+       font-weight: 400;
+
+ }
+  
+form {
+    position: relative;
+    left: 200px;
+    top: -293px;
+}
+
+  
+ #applause{
+  display: none
+ }
+  #wheel{
+     display: none 
+  }
+
+
+
+</style>
+<div class="luckywheelpopup" id="luckywheelpopup">
+   <div class="Spinlucky">
+   <button class="close" id="closepopBtn" style="
+    position: absolute;
+    font-size: 30px;
+    background-color: rgba(0,0,0,.4);
+    color: black;
+    cursor: pointer;
+    border: none;
+    left: 740px;
+">×</button>
+<div class="spinform"  id="spinform">
+  <div class="tryluck" id="tryluck">
+   <div class="mainbox" id="mainbox">
+  <div class="box" id="box">
+    <div class="box1">
+      <span class="font span1"><b>{{ section.settings.luck_1 }}</b></span>
+      <span class="font span2"><b>{{ section.settings.luck_2 }}</b></span>
+      <span class="font span3"><b>{{ section.settings.luck_3 }}</b></span>
+      <span class="font span4"><b>{{ section.settings.luck_4 }}</b></span>
+      <span class="font span5"><b>{{ section.settings.luck_5 }}</b></span>
+    </div>
+    <div class="box2">
+      <span class="font span1"><b>{{ section.settings.luck_6 }}</b></span>
+      <span class="font span2"><b>{{ section.settings.luck_7 }} <br /></span>
+      <span class="font span3"><b>{{ section.settings.luck_8 }}</b></span>
+      <span class="font span4"><b>{{ section.settings.luck_9 }}</b></span>
+      <span class="font span5"><b>{{ section.settings.luck_10 }}</b></span>
+    </div>
+  </div>
+  <button class="spin" onclick="spin()">SPIN</button>
+</div>
+     <div class="luckyinfo">
+        <h1 class="spinhed1">{{ section.settings.spin_hedtext }}</h1>
+        <p class="spinpara">{{ section.settings.spin_paratext }}</p>
+      </div>
+      <form name="myForm" id="myForm" onsubmit="return false" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdQawhVUuxh1bTPErsgKfyxKBkyLNMOL13sskpshQQXN3FNQQ/formResponse" method="post">
+           <div class="usename">
+          <label for="name"></label>
+          <input type="name" placeholder="Name" class="form-control" id="name" name="entry.1700435901" required/>
+        </div>
+        <div class="usemail">
+          <label for="email"></label>
+          <input type="email" placeholder="Email" class="form-control" id="email" name="entry.1072548685" required/>
+        </div>
+     
+        <div class="checkbox">
+          <input type="checkbox" id="check" name="check" value="agree">
+          <label for="ckeck"> {{ section.settings.check_validtext }}</label><br>
+        </div>
+        <div class="spinbtn">
+          <input id="s"  type="submit" class="spintext" value="{{ section.settings.btn_spintext }}" onclick="validateForm()"/>
+        </div>
+      </form>
+   </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+
+function shuffle(array) {
+  var currentIndex = array.length,
+      randomIndex;
+
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+}
+
+function spin() {
+
+
+   const box = document.getElementById("box");
+   const element = document.getElementById("luckywheelpopup");
+  let SelectedItem = "";
+
+  let MagicRoaster = shuffle([1890, 2250, 2610]);
+  let Sepeda = shuffle([1850, 2210, 2570]); //Kemungkinan : 100%
+  let RiceCooker = shuffle([1810, 2170, 2530]);
+  let LunchBox = shuffle([1770, 2130, 2490]);
+  let Sanken = shuffle([1750, 2110, 2470]);
+  let Electrolux = shuffle([1630, 1990, 2350]);
+  let JblSpeaker = shuffle([1570, 1930, 2290]);
+
+  let Hasil = shuffle([
+    MagicRoaster[0],
+    Sepeda[0],
+    RiceCooker[0],
+    LunchBox[0],
+    Sanken[0],
+    Electrolux[0],
+    JblSpeaker[0],
+  ]);
+  // console.log(Hasil[0]);
+
+  // get the value of selected item
+  if (MagicRoaster.includes(Hasil[0])) SelectedItem = "{{ section.settings.luck_1 }}";
+  if (Sepeda.includes(Hasil[0])) SelectedItem = "{{ section.settings.luck_2 }}";
+  if (RiceCooker.includes(Hasil[0])) SelectedItem = "{{ section.settings.luck_3 }}";
+  if (LunchBox.includes(Hasil[0])) SelectedItem = "{{ section.settings.luck_4 }}";
+  if (Sanken.includes(Hasil[0])) SelectedItem = "{{ section.settings.luck_5 }}";
+  if (Electrolux.includes(Hasil[0])) SelectedItem = "{{ section.settings.luck_6 }}";
+  if (JblSpeaker.includes(Hasil[0])) SelectedItem = "{{ section.settings.luck_7 }}";
+
+ 
+  box.style.setProperty("transition", "all ease 5s");
+  box.style.transform = "rotate(" + Hasil[0] + "deg)";
+  element.classList.remove("animate");
+  setTimeout(function () {
+    element.classList.add("animate");
+  }, 5000);
+          
+ setTimeout(function () {
+    swal(
+      "Congratulations",
+      "You Won The " + SelectedItem + ".",
+      "success"
+    );
+  }, 5500);
+
+ 
+  setTimeout(function () {
+    box.style.setProperty("transition", "initial");
+    box.style.transform = "rotate(90deg)";
+  }, 6000);
+}
+
+
+    
+ document.querySelector("#closepopBtn").addEventListener("click",function(){
+         document.querySelector(".luckywheelpopup").style.display="none";
+       });
+
+         window.addEventListener("load",function(){
+        setTimeout(
+          function open(event){
+             document.querySelector(".luckywheelpopup").style.display="block";
+          },
+          2000
+        );
+             console.log("=====insisde");
+          });
+   function validateForm() {
+
+      var x=document.forms["myForm"]["entry.1700435901"].value;
+      if (x==null || x=="") {
+        alert("Name must be filled out");
+        return false;
+       }
+
+      var y=document.forms["myForm"]["entry.1072548685"].value;
+      if (y==null || y=="") {
+        alert("email name must be filled out");
+        return false;
+      }
+        spin();
+        return true;
+      }
+
+</script>
+
+{% schema %}
+{
+  "name": "luckywheelminimog",
+  "settings": [
+     {
+      "type": "text",
+      "id": "luck_1",
+      "label": "write heading"
+    },
+    {
+      "type": "text",
+      "id": "luck_2",
+      "label": "write heading"
+    },
+    {
+      "type": "text",
+      "id": "luck_3",
+      "label": "write heading"
+    },
+    {
+      "type": "text",
+      "id": "luck_4",
+      "label": "write heading"
+    },
+    {
+      "type": "text",
+      "id": "luck_5",
+      "label": "write heading"
+    },
+    {
+      "type": "text",
+      "id": "luck_6",
+      "label": "write heading"
+    },
+    {
+      "type": "text",
+      "id": "luck_7",
+      "label": "write heading"
+    },
+    {
+      "type": "text",
+      "id": "luck_8",
+      "label": "write heading"
+    },
+    {
+      "type": "text",
+      "id": "luck_9",
+      "label": "write heading"
+    },
+    {
+      "type": "text",
+      "id": "luck_10",
+      "label": "write heading"
+    },
+     {
+      "type": "text",
+      "id": "spin_hed",
+      "label": "write heading"
+    },
+    {
+        "type": "textarea",
+        "id": "spin_para",
+        "label": "Write paragraph"
+      },
+    {
+        "type": "textarea",
+        "id": "check_text",
+        "label": "Write paragraph"
+      },
+    {
+          "type": "text",
+          "id": "btn_spin",
+          "default": "NO SPAM, WE PROMISE",
+          "label": "button name"
+        },
+    {
+      "type": "text",
+      "id": "spin_hedtext",
+      "label": "write heading"
+    },
+    {
+        "type": "textarea",
+        "id": "spin_paratext",
+        "label": "Write paragraph"
+      },
+    {
+        "type": "textarea",
+        "id": "check_validtext",
+        "label": "Write paragraph"
+      },
+      {
+          "type": "text",
+          "id": "btn_spintext",
+          "default": "NO SPAM, WE PROMISE",
+          "label": "button name"
+        }
+  ],
+ "presets": [
+  {
+    "name": "luckywheelminimog"
+  }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,143 @@
+
+<script>
+  var slides=document.querySelectorAll(".card");
+  var counter=0;
+  slides.forEach(
+    (card,index)=>{
+    card.style.left=`${index * 500}px`
+    }
+  )
+  const goback=()=>{
+    counter--
+    slideImage()
+  }
+   const gonext=()=>{
+    counter++
+    slideImage()
+  }
+ const slideImage = () => {
+   slides.forEach(
+     (card)=>{
+       card.style.transform=`translateX(-${counter * 500}px)`
+     }
+   )
+ }
+</script>
+
+
+
+<style>
+.slider{
+  background-color: #453481;
+  padding-bottom: 111px;
+  padding-left: 23px;
+}  
+    .card{
+  background-color: #FFFFFF;
+  min-width: 605px;
+  height: 320px;
+  border-radius: 10px;
+  padding: 30px;
+  transition: 1s;
+ 
+  
+  }
+  .sliderbox{
+    display: flex;
+    gap: 30px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin: auto;
+    flex-direction: row;
+  } 
+  
+</style>
+
+
+
+<div class="slider">
+      <div class="heading">
+      <h1 style="color: white;
+        padding: 40px;">{{ section.settings.Sliderheading }}</h1>
+      </div>
+  <div class="sliderbox">
+        <button onclick="goback()">
+            <
+        </button>
+    <div class="card">
+              <div class="pa1">
+               <p>{{ section.settings.slidertextone }}</p>
+              </div>
+             <div class="pa2">
+             <p>{{ section.settings.slidertext }}</p>
+          </div>
+          <div class="pa3">
+           <p>{{ section.settings.secondslidertext }}</p>
+          </div>
+    </div>
+    <div class="card">
+            <div class="pa1">
+             <p>{{ section.settings.slidertextone }}</p>
+            </div>
+           <div class="pa2">
+             <p>{{ section.settings.slidertext }}</p>
+          </div>
+          <div class="pa3">
+           <p>{{ section.settings.secondslidertext }}</p>
+          </div>
+    </div>
+   <div class="card">
+        <div class="pa1">
+         <p>{{ section.settings.slidertextone }}</p>
+        </div>
+       <div class="pa2">
+         <p>{{ section.settings.slidertext }}</p>
+        </div>
+        <div class="pa3">
+           <p>{{ section.settings.secondslidertext }}</p>
+        </div>
+    </div>
+  </div>
+         <button onclick="gonext()">
+            >
+       </button>
+</div>
+{% schema %}
+  {
+    "name": "livpure ten section",
+    "settings": [
+      {
+      "type": "text",
+      "id": "Sliderheading",
+      "label": "heading text name "
+    },
+      {
+      "type": "text",
+      "id": "slidertextone",
+      "label": "name text box"
+    },
+      {
+      "type": "text",
+      "id": "slidertext",
+      "label": "slider text head"
+    },
+      {
+      "type": "text",
+      "id": "secondslidertext",
+      "label": "slider text"
+    }
+    ],
+    "presets":[
+      {
+        "name": "livpure section slider"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

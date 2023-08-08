@@ -1,0 +1,297 @@
+<style>
+  .mylastbtn{
+    background-color: #453481;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+}
+  .lst_btn{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    background-color: #F8F8FF;
+  }
+.last_oneimg{
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+
+}
+  .imgsection1{
+      border-radius: 17px;
+     } 
+  
+  .imgsection2{
+      border-radius: 17px;
+     } 
+  
+  .imgsection3{
+      border-radius: 17px;
+     } 
+  
+  
+  .imgsection4{
+      border-radius: 17px;
+     } 
+  
+.last_twoimg{
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  border-radius: 17px;
+}
+.last_threeimg{
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  border-radius: 17px;
+}
+.last_fourimg{
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  border-radius: 17px;
+}
+ .lastsection{
+   padding: 15px;
+   display: flex;
+   justify-content: space-between;
+   border-radius: 10px;
+   background-color: #F8F8FF;
+   flex-wrap: wrap;
+}
+  @media screen and (max-width: 667px) {
+                      .lastsection{
+                      display: flex;
+                      flex-wrap: wrap;
+                      background-color: #F8F8FF;
+                    }
+                      .imgsection1{
+                          border-radius: 2px;
+                        
+                         } 
+                      
+                      .imgsection2{
+                          border-radius: 2px;
+                         } 
+                      
+                      .imgsection3{
+                          border-radius: 2px;
+                         } 
+                      
+                      
+                      .imgsection4{
+                          border-radius: 2px;
+                         } 
+                      
+    
+</style>
+
+
+
+<div class="lastsection">
+<div class="last_oneimg">
+<img class="imgsection1" src="{{ section.settings.last_oneimg | img_url: 'master'}}"
+  style="width: 100%"
+  />
+  <div class="pricerivews">
+<div>{{ section.settings.lastoneone }}</div> 
+<div>{{ section.settings.lastonetwo }}</div> 
+<div>{{ section.settings.lastonethree }}</div> 
+<div><del style="color: red;">{{ section.settings.lastonefour }}</del></div>
+<div>{{ section.settings.lastonefive }}</div>
+</div>
+</div>
+  <div class="last_twoimg">
+<img class="imgsection2" src="{{ section.settings.last_twoimg | img_url: 'master'}}"
+   style="width: 100%"
+  />
+<span>{{ section.settings.lasttwoone }}</span> 
+<span>{{ section.settings.lasttwotwo }}</span>
+<span>{{ section.settings.lasttwothree }}</span> 
+<span><del style="color: red;">{{ section.settings.lasttwofour }}</span>
+<span>{{ section.settings.lasttwofive }}</span>
+</div>
+  <div class="last_threeimg">
+<img class="imgsection3" src="{{ section.settings.last_threeimg | img_url: 'master'}}"
+   style="width: 100%"
+  />
+<span>{{ section.settings.lastthreeone }}</span> 
+<span>{{ section.settings.lastthreetwo }}</span>
+<span>{{ section.settings.lastthreethree }}</span> 
+<span><del style="color: red;">{{ section.settings.lastthreefour }}</span>
+<span>{{ section.settings.lastthreefive }}</span>
+</div>
+  <div class="last_fourimg">
+<img class="imgsection4" src="{{ section.settings.last_fourimg | img_url: 'master'}}"
+   style="width: 100%"
+  />
+<span class="firstcard">{{ section.settings.lastfourone }}</span> 
+<span class="firstcard2">{{ section.settings.lastfourtwo }}</span>
+<span class="firstcard3">{{ section.settings.lastfourthree }}</span> 
+<span class="firstcard4"><del style="color: red;">{{ section.settings.lastfourfour }}</span>
+<span class="firstcard5">{{ section.settings.lastfourfive }}</span>
+</div>
+</div>
+ <div class="lst_btn"> 
+  <a href="{{ section.settings.button_link_one}}"><button type="button" class="mylastbtn">{{ section.settings.button_last }}</button>
+</a>
+</div>
+{% schema %}
+  {
+    "name": "last Section ",
+    "settings": [
+      {
+      "type": "image_picker",
+        "id": "last_oneimg",
+        "label": "select img"
+      },
+       {
+      "type": "text",
+      "id": "lastoneone",
+      "label": "name text box"
+    },
+       {
+      "type": "text",
+      "id": "lastonetwo",
+      "label": "review text box"
+    },
+       {
+      "type": "text",
+      "id": "lastonethree",
+      "label": "price text box"
+    },
+      {
+      "type": "text",
+      "id": "lastonefour",
+      "label": "discount price text box"
+    },
+       {
+      "type": "text",
+      "id": "lastonefive",
+      "label": "tex text box"
+    },
+      {
+      "type": "image_picker",
+        "id": "last_twoimg",
+        "label": "select img"
+      },
+      {
+      "type": "text",
+      "id": "lasttwoone",
+      "label": "name text box"
+    },
+       {
+      "type": "text",
+      "id": "lasttwotwo",
+      "label": "review text box"
+    },
+       {
+      "type": "text",
+      "id": "lasttwothree",
+      "label": "price text box"
+    },
+      {
+      "type": "text",
+      "id": "lasttwofour",
+      "label": "discount price text box"
+    },
+       {
+      "type": "text",
+      "id": "lasttwofive",
+      "label": "tex text box"
+    },
+      {
+      "type": "image_picker",
+        "id": "last_threeimg",
+        "label": "select img"
+      },
+      {
+      "type": "text",
+      "id": "lastthreeone",
+      "label": "name text box"
+    },
+       {
+      "type": "text",
+      "id": "lastthreetwo",
+      "label": "review text box"
+    },
+       {
+      "type": "text",
+      "id": "lastthreethree",
+      "label": "price text box"
+    },
+      {
+      "type": "text",
+      "id": "lastthreefour",
+      "label": "discount price text box"
+    },
+       {
+      "type": "text",
+      "id": "lastthreefive",
+      "label": "tex text box"
+    },
+      {
+      "type": "image_picker",
+        "id": "last_fourimg",
+        "label": "select img"
+      },
+      {
+      "type": "text",
+      "id": "lastfourone",
+      "label": "name text box"
+    },
+       {
+      "type": "text",
+      "id": "lastfourtwo",
+      "label": "review text box"
+    },
+       {
+      "type": "text",
+      "id": "lastfourthree",
+      "label": "price text box"
+    },
+      {
+      "type": "text",
+      "id": "lastfourfour",
+      "label": "discount price text box"
+    },
+       {
+      "type": "text",
+      "id": "lastfourfive",
+      "label": "tex text box"
+    },
+      {
+          "type": "text",
+          "id": "button_last",
+          "default": "Button label",
+          "label": "button name"
+        },
+        {
+          "type": "url",
+          "id": "button_link_one",
+          "label": "Button url link"
+        }
+    ],
+    "presets":[
+      {
+    "name": "Livpure last section"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

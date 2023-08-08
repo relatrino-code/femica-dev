@@ -1,0 +1,185 @@
+{% comment %}
+    <script>
+      document.querySelectorAll(".container").forEach((menu) => {
+        menu.addEventlistener("mouseover",(event)=>{
+          const eventTarget = event.currentTarget;
+          const parentUl = eventTarget.parentNode.parentNode.parentNode;
+          parentUl.quertSelectorAll('.Main_list').forEach(menulist)=>
+          const megaMenu = menuList.querySelector(".container");
+          if(megaMenu != null && megaMenu.open){
+            megeMneu.open = false;
+          }
+        })
+        event.currentTarget.open=true;
+      });
+
+      menu.querySelector(".container").addEventLisrener("mouseout",(event)=> {
+        event.currentTarget.parentNode.open= false;
+      })
+      });
+      document.querySelectorAll(".Main_list").forEach((menu) =>{
+        menu.addEventListener("mouseover",(event)=>{
+          const eventTarget = event.currentTarget;
+          const parentUl = eventTarget.parentNode.parentNode;
+          parentUl.querySelectorAll('.container').forEach((menuList)=>{
+            const megaMenu = menuList.QuerySelector(".mege-menu");
+            if(megeMenu != null && megaMenu.open){
+              megaMenu.open = false;
+            }
+          })
+        })
+      });
+    </script>
+
+  <script>
+    function init() {
+      cacheSelectors();
+      $(selectors.siteNavHasDropdown).on('mouseenter', function() {
+        	var $el = $(this);
+      	showDropdown($el);
+      });
+      $('.megamanu').on('mouseenter', function() {
+      	$(this).show();
+        	$(this).parent().addClass(config.activeClass);
+      });
+      $(selectors.siteNavHasDropdown).on('mouseleave', function() {
+      	hideDropdown(cache.$activeDropdown);
+      });
+      $('.megamanu').on('mouseleave', function() {
+        	hideDropdown(cache.$activeDropdown);
+        	$(this).hide();
+      });
+      cache.$subMenuLinks.on('click.siteNav', function(evt) {
+        // Prevent click on body from firing instead of link
+        evt.stopImmediatePropagation();
+      });
+    }
+
+      function showDropdown($el) {
+      $el.addClass(config.activeClass);
+      var headerHeight = $('#shopify-section-header').outerHeight(),
+          headerNav = $el.find('.megamanu').outerHeight();
+      $el.find('.megamanu').css({top: +headerHeight+ 'px'});
+      cache.$activeDropdown = $el;
+    }
+    function hideDropdown($el) {
+      // remove aria on open dropdown
+      $el.removeClass(config.activeClass);
+      // reset active dropdown
+      cache.$activeDropdown = $(selectors.siteNavActiveDropdown);
+      $(selectors.body).off('click.siteNav');
+      $(window).off('keyup.siteNav');
+    }
+  </script>
+{% endcomment %}
+
+<script>
+    $("#{{ link.title }}_mainmenu").bind('mouseover', function() {
+      var old_color = $(this).css("background-color");
+      $(this)[0].style. display= 'block';
+
+
+      $("#{{ link.title }}_mainmenu").bind('mouseout', function () {
+          $(this)[0].style.display= 'block';
+      });
+  });
+</script>
+<style>
+    .mega_list{
+      padding: 0px;
+      marging: 0px;
+      width: 100%;
+      background-color: #f8f1df;
+    }
+    .container{
+      font-family: "gopher","Georgia";
+      position: relative;
+      width: 100%;
+      padding: 1px;
+    }
+    nav ul{
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      width: 100%;
+      font-size: small;
+    }
+   nav ul li a{
+     text-decoration: none;
+     color: #B8860B;
+     padding-right: 20px;
+     padding-left: 10px;
+   }
+  .megamanu{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background-color: LightGray;
+    top: 100%;
+    left: 0px;
+    display: none;
+    opacity: 0;
+    box-shadow: 0px 10px 2px lightblue;
+  }
+  .Main_list:hover .megamanu{
+    display: block;
+    opacity: 1 !Important;
+    transform: translateY(0) !Important;
+  }
+</style>
+
+<nav class="mega_list">
+  <div class="container">
+    <ul id="siteNav">
+      {%- for link in section.settings.menu.links -%}
+        <li class="Main_list" id="{{ link.title }}_mainmenu">
+          <a href="{{ link.url }}"> {{ link.title }}</a>
+        </li>
+        <div class="megamanu" id="{{ link.title }}_megamenu">
+          {%- for childlink in link.links -%}
+            <li class="child_mega_list">
+              <a href="{{ link.url }}"> {{ childlink.title }}</a>
+            </li>
+            {%- for grandchildlink in link.links -%}
+              <li class="Grandchild_mega_list">
+                <a href="{{ link.url }}">
+                  {{ childlink.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+          {%- endfor -%}
+        </div>
+      {%- endfor -%}
+    </ul>
+  </div>
+</nav>
+
+{% schema %}
+{
+  "name": "Maga manu nav",
+  "settings": [
+   {
+  "type": "link_list",
+  "id": "menu",
+  "label": "Menu"
+  },
+
+    {
+    "type": "image_picker",
+    "id": "image",
+    "label": "Image"
+    }
+  ],
+    "presets":[
+      {
+      "name": "livpure_mega_manu"
+      }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

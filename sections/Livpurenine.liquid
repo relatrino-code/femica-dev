@@ -1,0 +1,28 @@
+
+<div class="nine_img" style="width: 100%  padding-top: 30px;" >
+<img style="width: 100%;" src={{ section.settings.nineimg | img_url: 'master' }}/>
+</div>
+
+{% schema %}
+  {
+    "name": "Livpure nine section",
+    "settings": [
+      {
+      "type": "image_picker",
+        "id": "nineimg",
+        "label": "select img"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Livpure_nine"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

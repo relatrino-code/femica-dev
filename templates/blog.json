@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "bb9f6245-ebb6-4cc8-a435-658dca5161c7": {
+      "type": "megamanu",
+      "settings": {
+        "menu": "sleepycat-navigation"
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "disabled": true,
+      "settings": {
+        "layout": "collage",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "edda9472-5341-47dd-86f2-a35167d2d5b0": {
+      "type": "Livpure",
+      "disabled": true,
+      "settings": {
+        "Main_heading": "Livpure Mattresses",
+        "top_paragraph": "A mattress collection powered by innovation & backed by science. Designed to deliver comfort, with a variety of options to choose from in line with your needs; Natural Latex, Orthopaedic, Memory Foam and more. Your one stop online mattress haven, with free doorstep delivery!Read more",
+        "button_read_more": "Read more",
+        "button_link_1": "shopify:\/\/collections\/home-inverter",
+        "FirstLivpureimg": "shopify:\/\/shop_images\/liv...._first.webp",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=WyxzAU3p8CE&t=15027s"
+      }
+    }
+  },
+  "order": [
+    "bb9f6245-ebb6-4cc8-a435-658dca5161c7",
+    "main",
+    "edda9472-5341-47dd-86f2-a35167d2d5b0"
+  ]
+}

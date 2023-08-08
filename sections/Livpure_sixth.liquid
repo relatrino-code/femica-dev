@@ -1,0 +1,28 @@
+
+<div class="diamond_img" style="width: 100%  padding-top: 15px;" >
+<img style="width: 100%;" src={{ section.settings.diamondimg | img_url: 'master' }}/>
+</div>
+
+{% schema %}
+  {
+    "name": "Livpure sixth section",
+    "settings": [
+      {
+      "type": "image_picker",
+        "id": "diamondimg",
+        "label": "select img"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Livpure_sixth"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

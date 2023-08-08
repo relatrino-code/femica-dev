@@ -1,0 +1,111 @@
+<style>
+  .img_texteight{
+    display: flex;
+
+  }
+   .texteight{
+      background-color: #F8F8FF;
+      color: #E6E6F;
+      font-weight: 500;
+      width: 100%;
+      padding-left: 20px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+   }
+  .paeight{
+    padding-bottom: 15px;
+      font-size: large;
+  }
+  .Paragrapheight{
+    font-size: large;
+  }
+  @media screen and (max-width: 667px) {
+      .img_texteight{
+         display: flex;
+        flex-direction: column-reverse;
+      }
+     .textseight{
+       height: 400px;
+     }
+    .imgeightresponsive{
+      width: 356px;
+    }
+  }
+</style>
+
+<div class="img_texteight">
+  <div class="texteight">
+    <h1>{{ section.settings.textheadingeight }}</h1>
+    <div class="paeight">
+      <span>{{ section.settings.text_boxeight }}</span>
+    </div>
+    <div class="Paragrapheight">
+      <span>{{ section.settings.Secondtext_boxeight }}</span>
+    </div>
+  </div>
+  <div class="imgeight" style="width: 100%;  height: 100%;">
+    <img
+      class="imgeightresponsive"
+      src="{{ section.settings.myimageeight | img_url: 'master'}}"
+      style="
+        border-top-right-radius: 26px;
+        border-bottom-right-radius: 26px;
+      "
+    >
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Livpure eight Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "textheadingeight",
+      "label": "head text box"
+    },
+    {
+      "type": "textarea",
+      "id": "text_boxeight",
+      "label": "My text box"
+    },
+    {
+      "type": "textarea",
+      "id": "Secondtext_boxeight",
+      "label": "My text box"
+    },
+    {
+      "type": "select",
+      "id": "text_positioneight",
+      "label": "select text position",
+      "options":[
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "image_picker",
+      "id": "myimageeight",
+      "label": "Select image"
+      }
+
+  ],
+  "presets":[
+    {
+      "name": "Livpure eight Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

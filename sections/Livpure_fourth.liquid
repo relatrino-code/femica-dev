@@ -1,0 +1,110 @@
+<style>
+    .img_text{
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 10px;
+      marging: 10px;
+    }
+     .text{
+        padding: 30px;
+        background-color: #F8F8FF;
+        color: #E6E6F;
+        font-weight: 500;
+       height: 650px;
+        border-top-right-radius: 31px;
+        border-bottom-right-radius: 31px;
+     }
+    .pa{
+      padding-bottom: 15px;
+        font-size: large;
+    }
+    .Paragraph{
+      font-size: large;
+    }
+    .daimondimg{
+      height: 650px;
+    }
+   @media screen and (max-width: 667px) {
+      .img_text{
+         display: flex;
+        flex-direction: column-reverse;
+      }
+      .daimondimg{
+      height: 400px;
+      width: 341px;
+    }
+     .text{
+      height: 519px;
+     }
+  }
+</style>
+
+<div class="img_text">
+  <div class="text">
+    <h1>{{ section.settings.textheading }}</h1>
+    <div class="pa">
+      <span>{{ section.settings.text_box }}</span>
+    </div>
+    <div class="Paragraph">
+      <span>{{ section.settings.Secondtext_box }}</span>
+    </div>
+  </div>
+  <div class="img" style="width: 100%;  height: 100%;">
+    <img class="daimondimg" src="{{ section.settings.myimage | img_url: 'master'}}">
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Livpure fourth Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "textheading",
+      "label": "head text box"
+    },
+    {
+      "type": "textarea",
+      "id": "text_box",
+      "label": "My text box"
+    },
+    {
+      "type": "textarea",
+      "id": "Secondtext_box",
+      "label": "My text box"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "select text position",
+      "options":[
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "image_picker",
+      "id": "myimage",
+      "label": "Select image"
+      }
+
+  ],
+  "presets":[
+    {
+      "name": "Livpure fourth Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

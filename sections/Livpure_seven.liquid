@@ -1,0 +1,103 @@
+<style>
+  .img_textseven{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+   .textseven{
+      padding: 30px;
+      background-color: #F8F8FF;
+      color: #E6E6F;
+      font-weight: 500;
+      border-top-right-radius: 31px;
+      border-bottom-right-radius: 31px;
+   }
+  .paseven{
+    padding-bottom: 15px;
+      font-size: large;
+  }
+  .Paragraphseven{
+    font-size: large;
+  }
+   @media screen and (max-width: 667px) {
+      .img_textseven{
+         display: flex;
+        flex-direction: column-reverse;
+      }
+     .textseven{
+      height: 547px;
+     }
+     .imgresponsive_2{
+       width: 360px;
+     }
+  }
+</style>
+
+<div class="img_textseven">
+  <div class="textseven">
+    <h1>{{ section.settings.textheadingseven }}</h1>
+    <div class="paseven">
+      <span>{{ section.settings.text_boxseven }}</span>
+    </div>
+    <div class="Paragraphseven">
+      <span>{{ section.settings.Secondtext_boxseven }}</span>
+    </div>
+  </div>
+  <div class="imgseven" style="width: 100%;  height: 100%;">
+    <img class="imgresponsive_2" src="{{ section.settings.myimageseven | img_url: 'master'}}">
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Livpure seven Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "textheadingseven",
+      "label": "head text box"
+    },
+    {
+      "type": "textarea",
+      "id": "text_boxseven",
+      "label": "My text box"
+    },
+    {
+      "type": "textarea",
+      "id": "Secondtext_boxseven",
+      "label": "My text box"
+    },
+    {
+      "type": "select",
+      "id": "text_positionseven",
+      "label": "select text position",
+      "options":[
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "image_picker",
+      "id": "myimageseven",
+      "label": "Select image"
+      }
+
+  ],
+  "presets":[
+    {
+      "name": "Livpure seven Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

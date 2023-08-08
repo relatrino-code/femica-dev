@@ -1,0 +1,446 @@
+{
+  "sections": {
+    "8ea44ac2-754a-410d-a735-e152fc8d53f4": {
+      "type": "megamanu",
+      "settings": {
+        "menu": "sleepycat-navigation"
+      }
+    },
+    "35da306c-d84b-4783-bf36-9ed129152a3e": {
+      "type": "Livpure_mega_list",
+      "disabled": true,
+      "settings": {
+        "menu": "sleepycat-navigation"
+      }
+    },
+    "30681f90-b3db-40fd-b19a-75711da56810": {
+      "type": "Livpure_mega_list",
+      "disabled": true,
+      "settings": {
+        "menu": ""
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "{{ shop.brand.cover_image }}",
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Talk about your brand<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "disabled": true,
+      "blocks": {
+        "collection-0": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": ""
+          }
+        },
+        "product": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        },
+        "collection-1": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection-0",
+        "product",
+        "collection-1"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "acd5ae0b-1b5f-469a-863c-2f59acc86757": {
+      "type": "Livpure",
+      "settings": {
+        "Main_heading": "Livpure Mattresses",
+        "top_paragraph": "A mattress collection powered by innovation & backed by science. Designed to deliver comfort, with a variety of options to choose from in line with your needs; Natural Latex, Orthopaedic, Memory Foam and more. Your one stop online mattress haven, with free doorstep delivery!",
+        "button_read_more": "Button label",
+        "button_link_1": "",
+        "FirstLivpureimg": "shopify:\/\/shop_images\/liv...._first.webp",
+        "video_url": "GeykycZ4Ixs"
+      }
+    },
+    "e444a463-15a9-4f7d-9201-6a672515be83": {
+      "type": "Livpure_third",
+      "disabled": true,
+      "settings": {
+        "Shipingone": "shopify:\/\/shop_images\/free_shipping.webp",
+        "iconeone": "write here",
+        "Shipingtwo": "shopify:\/\/shop_images\/easy_cod.webp",
+        "iconetwo": "write here",
+        "Shipingthree": "shopify:\/\/shop_images\/no_cost_emi_1.webp",
+        "iconethree": "write here",
+        "Shipingfour": "shopify:\/\/shop_images\/direct_from_factory.webp",
+        "iconefour": "write here",
+        "Shipingfive": "shopify:\/\/shop_images\/crafted_india.webp",
+        "iconefive": "write here"
+      }
+    },
+    "a85130a2-7536-4a9e-ae47-84f168345c62": {
+      "type": "Livpure_fourth",
+      "disabled": true,
+      "settings": {
+        "textheading": "5D SleepTech™ Contour Support",
+        "text_box": "Backed by rigorous research, the SleepTech™ Zones are 5 differentiated pressure relieving zones mapped to the weight of different body parts & the support they need.",
+        "Secondtext_box": "The curved foam aligns with the natural curvature of your spine aimed to help achieve undisturbed quality sleep.",
+        "text_position": "right",
+        "myimage": "shopify:\/\/shop_images\/5D_SleepTech.webp"
+      }
+    },
+    "24abe6e3-cff1-4780-b5a1-a73ddc3c7e6d": {
+      "type": "Livpure_fifth",
+      "disabled": true,
+      "settings": {
+        "textheadingfifth": "Biocrystal®",
+        "text_boxfifth": "Sourced from the depths of ancient crystal caves, <br>Biocrystal® is a perfect combination of 16 natural crystals.Meticulously blended into the mattress, it is known to :",
+        "Secondtext_boxfifth": "• Induce deep sleep <br>\n\n• Provide mental and physical stress relief <br>\n\n• Release positive energy <br>\n\n• Keep the mattress temperature neutral",
+        "text_positionfifth": "right",
+        "myimagefifth": "shopify:\/\/shop_images\/Biocrystal_collection_page_1.webp"
+      }
+    },
+    "19341dbc-85f0-408a-bd27-57cea4bc625e": {
+      "type": "Livpure_sixth",
+      "disabled": true,
+      "settings": {
+        "diamondimg": "shopify:\/\/shop_images\/crystals_3_copy_1.webp"
+      }
+    },
+    "e74a5fe6-f5a9-48ba-ba9d-0d9b89a6afba": {
+      "type": "Livpure_seven",
+      "settings": {
+        "textheadingseven": "Aeroscape™",
+        "text_boxseven": "Manufactured with Dow <br>ComfortScience™ Technology to guarantee the best <br> \nin class breathable foam.",
+        "Secondtext_boxseven": "The significantly higher open cell foam helps <br>in providing an enhanced breathable mattress for a <br>sweat-free, refreshing sleep.",
+        "text_positionseven": "right",
+        "myimageseven": "shopify:\/\/shop_images\/Aeroscape.webp"
+      }
+    },
+    "be73903c-38fd-4932-8b69-821cec8ab992": {
+      "type": "Livpure_eight",
+      "disabled": true,
+      "settings": {
+        "textheadingeight": "LuxeX™",
+        "text_boxeight": "This technology provides a bouncy spring-mattress like support.<br> \n\nThis Latex softly cradles for a plush comfort,<br> while the elasticity helps maintain natural <br> spinal alignment.",
+        "Secondtext_boxeight": "This technology has a unique feature which <br> helps you stay undisturbed even with regular <br> partner movement.",
+        "text_positioneight": "right",
+        "myimageeight": "shopify:\/\/shop_images\/luxex_rev.webp"
+      }
+    },
+    "53d1ec01-af5c-422e-9abb-37d3fb712998": {
+      "type": "Livpurenine",
+      "disabled": true,
+      "settings": {
+        "nineimg": "shopify:\/\/shop_images\/hero_banners_revised_2.webp"
+      }
+    },
+    "bceb2b2b-0067-4279-a12c-e632e56deccc": {
+      "type": "Livpure_ten",
+      "disabled": true,
+      "settings": {
+        "Sliderheading": "Testimonials",
+        "slidertextone": "",
+        "slidertext": "",
+        "secondslidertext": ""
+      }
+    },
+    "381f4792-ef61-4371-8f19-ced853139818": {
+      "type": "Livpure_last",
+      "disabled": true,
+      "settings": {
+        "last_oneimg": "shopify:\/\/shop_images\/livpure-sleep-bed-linen-all-weather-comforter-35928600281241.webp",
+        "lastoneone": "All Wearher <br> Comforter",
+        "lastonetwo": "*****514    <small>reviews<\/small>",
+        "lastonethree": "From ?1624.00",
+        "lastonefour": "MRE: ?2,400.00",
+        "lastonefive": "<small>per number inclusiv of all taxes<\/small>",
+        "last_twoimg": "shopify:\/\/shop_images\/livpure-sleep-bed-linen-king-grey-microfiber-bedsheet-set-32631559225497.webp",
+        "lasttwoone": "All Wearher Comforter",
+        "lasttwotwo": "*****514    <small>reviews<\/small>",
+        "lasttwothree": "From ?1624.00",
+        "lasttwofour": "MRE: ?2,400.00",
+        "lasttwofive": "<small>per number inclusiv of all taxes<\/small>",
+        "last_threeimg": "shopify:\/\/shop_images\/livpure-sleep-pillow-breeze-cool-gel-memory-foam-pillow-advanced-32841063071897.webp",
+        "lastthreeone": "All Wearher Comforter",
+        "lastthreetwo": "*****514    <small>reviews<\/small>",
+        "lastthreethree": "From ?1624.00",
+        "lastthreefour": "MRE: ?2,400.00",
+        "lastthreefive": "<small>per number inclusiv of all taxes<\/small>",
+        "last_fourimg": "shopify:\/\/shop_images\/livpure-sleep-bed-linen-king-white-premium-cotton-fitted-bedsheet-set-33123917627545.webp",
+        "lastfourone": "All Wearher Comforter",
+        "lastfourtwo": "*****514    <small>reviews<\/small>",
+        "lastfourthree": "From ?1624.00",
+        "lastfourfour": "MRE: ?2,400.00",
+        "lastfourfive": "<small>per number inclusiv of all taxes<\/small>",
+        "button_last": "Button label",
+        "button_link_one": ""
+      }
+    },
+    "b0f41852-c34a-4ea6-9808-0ca7454aee0e": {
+      "type": "second_livpure_section",
+      "disabled": true,
+      "settings": {
+        "second_Main_heading": "Original Mattress Collection",
+        "first_card_heading": "Our most affordable mattress, with differentiated support and VOC neutralising technology",
+        "first_card_heading_img": "shopify:\/\/shop_images\/img_card_1.webp",
+        "first_card_url": "shopify:\/\/products\/i2-verter-lg-900",
+        "first_card_name": "Lumbar: HR Foam Mattress With 3D Sleeptech™",
+        "first_price": "Starting from ₹6,029.00   ₹6,899.00",
+        "second_card_heading_img": "shopify:\/\/shop_images\/row_2_2_img.webp",
+        "second_card_heading": "Medium Firm",
+        "second_second_card_heading": "Cooling Cover and Breathable Foam",
+        "second_third_card_heading": "3D SleepTech",
+        "first_list": "4 Inch (10.16 CM)",
+        "second_list": "1 Layer",
+        "third_list": "HR Support Foam",
+        "fourth_list": "m 3D contour foam",
+        "subtextone": "3D SleepTechTM",
+        "card_text": "3 Pressure Relieving Zones for customised comfort & balanced support",
+        "card_textone": "EGAPA Technology",
+        "card_textsecond": "Activated Carbon Filters reduces toxic VOCs and foul odors",
+        "card_textthird": "Aeroscape TM",
+        "card_textfourth": "Enhances the breathability of the mattress for cool sleep",
+        "button_Buy_Now": "BUY NOW",
+        "Buy_link_1": "shopify:\/\/collections\/home-inverter"
+      }
+    },
+    "be8fea9b-003b-4605-9da2-6f44dbd04464": {
+      "type": "spin",
+      "disabled": true,
+      "settings": {
+        "luck_1": "no luck try again",
+        "luck_2": "free product",
+        "luck_3": "26 % discount",
+        "luck_4": "try agin  next time",
+        "luck_5": "30 % discount",
+        "luck_6": "10% discount",
+        "luck_7": "no discount",
+        "luck_8": "Nothing avilable",
+        "luck_9": "no luck try again",
+        "luck_10": "win 10 rup",
+        "spin_hed": "",
+        "spin_para": "",
+        "check_text": "",
+        "btn_spin": "NO SPAM, WE PROMISE",
+        "spin_hedtext": "",
+        "spin_paratext": "",
+        "check_validtext": "",
+        "btn_spintext": "NO SPAM, WE PROMISE"
+      }
+    }
+  },
+  "order": [
+    "8ea44ac2-754a-410d-a735-e152fc8d53f4",
+    "35da306c-d84b-4783-bf36-9ed129152a3e",
+    "30681f90-b3db-40fd-b19a-75711da56810",
+    "image_banner",
+    "rich_text",
+    "featured_collection",
+    "collage",
+    "video",
+    "multicolumn",
+    "acd5ae0b-1b5f-469a-863c-2f59acc86757",
+    "e444a463-15a9-4f7d-9201-6a672515be83",
+    "a85130a2-7536-4a9e-ae47-84f168345c62",
+    "24abe6e3-cff1-4780-b5a1-a73ddc3c7e6d",
+    "19341dbc-85f0-408a-bd27-57cea4bc625e",
+    "e74a5fe6-f5a9-48ba-ba9d-0d9b89a6afba",
+    "be73903c-38fd-4932-8b69-821cec8ab992",
+    "53d1ec01-af5c-422e-9abb-37d3fb712998",
+    "bceb2b2b-0067-4279-a12c-e632e56deccc",
+    "381f4792-ef61-4371-8f19-ced853139818",
+    "b0f41852-c34a-4ea6-9808-0ca7454aee0e",
+    "be8fea9b-003b-4605-9da2-6f44dbd04464"
+  ]
+}
