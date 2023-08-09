@@ -1,0 +1,29 @@
+{% if section.settings.enabletext %}
+    <div style="text-align: center;">{{ section.settings.textid }}</div>
+{% endif %}
+
+{% schema %}
+    {
+      "name": "Custom Page Text",
+      "settings": [
+            {
+                "type": "text",
+                "id": "textid",
+                "label": "Enter Text Here",
+                "default": "Priyam is There"
+            },
+            {
+                "type": "checkbox",
+                "id": "enabletext",
+                "label": "Enable your Text",
+                "default": true
+            }    
+      ]
+    }
+{% endschema %}
+  
+{% stylesheet %}
+{% endstylesheet %}
+  
+{% javascript %}
+{% endjavascript %}
