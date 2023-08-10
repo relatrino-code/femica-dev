@@ -1,29 +1,85 @@
-{% if section.settings.enabletext %}
-    <div style="text-align: center;">{{ section.settings.textid }}</div>
-{% endif %}
-
+{% render 'my-page-text-snip' %}
 {% schema %}
+{
+  "name": "Gallery Section",
+  "settings": [
     {
-      "name": "Custom Page Text",
+      "type": "text",
+      "id": "textid",
+      "label": "Enter Text Here",
+      "default": "Priyam is There"
+    },
+    {
+      "type": "checkbox",
+      "id": "enabletext",
+      "label": "Enable your Text",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Position your Text",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "image_picker",
+      "id": "myimage",
+      "label": "Select Image"
+    },
+    {
+      "type": "select",
+      "id": "img_position",
+      "label": "Position your Image",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" },
+        { "value": "middle", "label": "Middle" },
+        { "value": "top", "label": "Top" },
+        { "value": "bottom", "label": "Botttom" }
+      ],
+      "default": "left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "My Text Box",
+      "category": "Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gallery",
+      "name": "Gallery",
       "settings": [
-            {
-                "type": "text",
-                "id": "textid",
-                "label": "Enter Text Here",
-                "default": "Priyam is There"
-            },
-            {
-                "type": "checkbox",
-                "id": "enabletext",
-                "label": "Enable your Text",
-                "default": true
-            }    
+        {
+          "type": "checkbox",
+          "id": "enable_gallery_img",
+          "label": "Enable Galllery Image",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "gallery_image",
+          "label": "Galllery Image"
+        },
+        {
+          "type": "url",
+          "id": "image_url",
+          "label": "Gallery Image URL"
+        }
       ]
     }
+  ]
+}
 {% endschema %}
-  
+
 {% stylesheet %}
 {% endstylesheet %}
-  
+
 {% javascript %}
 {% endjavascript %}
